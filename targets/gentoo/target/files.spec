@@ -28,6 +28,8 @@ CHOST="$[portage/CHOST_OVERRIDE:zap]"
 make.conf.subarchprofile: [
 FEATURES="$[portage/FEATURES:zap]"
 USE="$[portage/USE:zap]"
+CFLAGS="$[portage/CFLAGS:zap]"
+CXXFLAGS="$[portage/CFLAGS:zap]"
 ]
 
 locale.gen: [

@@ -124,6 +124,12 @@ cat > /etc/portage/package.mask << "EOF"
 $[[portage/files/package.mask:lax]]
 EOF
 fi
+if [ "$[portage/files/use.mask?]" = "yes" ]
+then
+cat > /etc/portage/make.profile/use.mask << "EOF"
+$[[portage/files/use.mask:lax]]
+EOF
+fi
 if [ -d /var/tmp/cache/probe ]
 then
 $[[probe/setup:lax]]
